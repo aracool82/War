@@ -7,11 +7,7 @@
 
     public SoldierBase CreateSpecialSoldier()
     {
-        int maxMultiply = 3;
-        int multiply = Assistant.GenerateRandomNumber(maxMultiply, 1);
-        int damage = GenerateDamge() * multiply;
-
-        return new SpecialSoldier(GenerateHealth(), damage, GenerateArmor());
+        return new SpecialSoldier(GenerateHealth(), GenerateDamge(), GenerateArmor());
     }
 
     public SoldierBase CreateMediumSoldier()

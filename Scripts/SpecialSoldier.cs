@@ -4,7 +4,7 @@ public class SpecialSoldier : SoldierBase
 {
     public SpecialSoldier(int health, int damage, int armor) : base(health, damage, armor)
     {
-        int maxMultiply = 4;
+        int maxMultiply = 3;
         int multiply = Assistant.GenerateRandomNumber(maxMultiply, 1);
         Damage *= multiply;
     }

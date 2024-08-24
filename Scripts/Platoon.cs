@@ -27,7 +27,7 @@ public class Platoon
 
     public void ShowInfo()
     {
-        string state = _soldiers.Count > 0 == true ? "Жив" : "Мертв";
+        string state = _soldiers.Count > 0 ? "Жив" : "Мертв";
 
         Console.WriteLine($"Взвод <{Name}>\nСтатус        -  {state} \n" +
                           $"Живые солдаты -  {_soldiers.Count}\n");

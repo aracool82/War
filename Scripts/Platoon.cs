@@ -27,7 +27,7 @@ public class Platoon
 
     public void ShowInfo()
     {
-        string state = IsAlive == true ? "Жив" : "Мертв";
+        string state = _soldiers.Count > 0 == true ? "Жив" : "Мертв";
 
         Console.WriteLine($"Взвод <{Name}>\nСтатус        -  {state} \n" +
                           $"Живые солдаты -  {_soldiers.Count}\n");
@@ -58,17 +58,5 @@ public class Platoon
         for (int i = 0; i < _soldiers.Count; i++)
             if (_soldiers[i].IsAlive == false)
                 _soldiers.Remove(_soldiers[i]);
-    }
-
-    private bool TryGetSolders(out List<SoldierBase> soldiers)
-    {
-        if (IsAlive)
-        {
-            soldiers = _soldiers;
-            return true;
-        }
-
-        soldiers = null;
-        return false;
     }
 }

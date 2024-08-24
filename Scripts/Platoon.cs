@@ -21,7 +21,7 @@ public class Platoon
     {
         string state = IsAlive == true ? "Жив" : "Мертв";
 
-        Console.WriteLine($"Взвод {Name}\nСтатус        -  {state} \n" +
+        Console.WriteLine($"Взвод <{Name}>\nСтатус        -  {state} \n" +
             $"Живые солдаты -  {_soldiers.Count}\n");
     }
 

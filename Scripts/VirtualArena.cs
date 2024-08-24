@@ -16,10 +16,7 @@ public class VirtualArena
 
     public void ShowInfo()
     {
-        Console.WriteLine("[1]");
         _platoon1.ShowInfo();
-
-        Console.WriteLine("[2]");
         _platoon2.ShowInfo();
 
         Console.ReadKey();

@@ -35,31 +35,29 @@ public class Platoon
 
     public void Attack(List<SoldierBase> soldiers)
     {
-
         if (soldiers == null)
             return;
-
-        RemoveDeadSolder();
 
         if (IsAlive)
         {
             Console.WriteLine("-------------------------------------");
 
             for (int i = 0; i < _soldiers.Count; i++)
-            {
                 _soldiers[i].Attack(soldiers);
-            }
         }
-
     }
 
-    private void RemoveDeadSolder()
+    public void RemoveDeadSolder()
     {
-        if (_soldiers != null)
-            if (_soldiers.Count > 0)
-                for (int i = 0; i < _soldiers.Count; i++)
-                    if (_soldiers[i].IsAlive == false)
-                        _soldiers.Remove(_soldiers[i]);
+        if (_soldiers == null)
+            return;
+
+        if (_soldiers.Count == 0)
+            return;
+
+        for (int i = 0; i < _soldiers.Count; i++)
+            if (_soldiers[i].IsAlive == false)
+                _soldiers.Remove(_soldiers[i]);
     }
 
     private bool TryGetSolders(out List<SoldierBase> soldiers)

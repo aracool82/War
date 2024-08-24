@@ -67,14 +67,4 @@ public class Platoon
         soldiers = null;
         return false;
     }
-
-    private List<SoldierBase> ReInitSolders(List<SoldierBase> soldiers)
-    {
-        List<SoldierBase> newSolders = new List<SoldierBase>();
-
-        foreach (var soldier in soldiers)
-            newSolders.Add(soldier.Clone());
-
-        return newSolders;
-    }
 }

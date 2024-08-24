@@ -19,7 +19,10 @@ public class HardSoldier : SoldierBase
                     int randomIndex = Assistant.GenerateRandomNumber(soldiers.Count);
 
                     if (soldiers[randomIndex].IsAlive)
+                    { 
                         soldiers[randomIndex].TakeDamage(Damage);
+                        PrintAttack(this, soldiers[randomIndex]);
+                    }
 
                 }
             }

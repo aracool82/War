@@ -17,6 +17,7 @@ public class MediumSoldier : SoldierBase
                 for (int i = 0; i < attackCount; i++)
                 {
                     soldiers[i].TakeDamage(Damage);
+                    PrintAttack(this, soldiers[i]);
                 }
             }
         }

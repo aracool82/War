@@ -24,7 +24,7 @@ public class Platoon
         string state = IsAlive == true ? "Жив" : "Мертв";
 
         Console.WriteLine($"Взвод <{Name}>\nСтатус        -  {state} \n" +
-            $"Живые солдаты -  {_soldiers.Count}\n");
+                          $"Живые солдаты -  {_soldiers.Count}\n");
     }
 
     public void Attack(Platoon opponentPlatoon)

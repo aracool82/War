@@ -3,15 +3,17 @@ using System;
 
 public class Platoon
 {
-    private List<SoldierBase> _soldiers;
+    private List<SoldierBase> _soldiers = new List<SoldierBase>();
+    private SoldierFabrick _soldierFabrick = new SoldierFabrick();
 
-    public Platoon(List<SoldierBase> solders, string name)
+    public Platoon(string name)
     {
-        if (solders == null)
-            throw new ArgumentNullException("Ссылка = Null");
-
         Name = name;
-        _soldiers = ReInitSolders(solders);
+
+        _soldiers.Add(_soldierFabrick.CreateEasySolder());
+        _soldiers.Add(_soldierFabrick.CreateSpecialSoldier());
+        _soldiers.Add(_soldierFabrick.CreateMediumSoldier());
+        _soldiers.Add(_soldierFabrick.CreateHardSoldier());
     }
 
     public string Name { get; private set; }

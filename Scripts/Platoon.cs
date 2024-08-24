@@ -40,6 +40,7 @@ public class Platoon
                     for (int i = 0; i < _soldiers.Count; i++)
                     {
                         _soldiers[i].Attack(opponentSolders);
+                        Console.WriteLine("_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_");
                     }
                 }
             }

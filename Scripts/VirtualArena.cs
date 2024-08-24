@@ -17,6 +17,7 @@ public class VirtualArena
     public void ShowInfo()
     {
         _platoon1.ShowInfo();
+
         _platoon2.ShowInfo();
 
         Console.ReadKey();
@@ -29,6 +30,7 @@ public class VirtualArena
         {
             ShowInfo();
             _platoon1.Attack(_platoon2);
+            Console.WriteLine("+++++++++++++++++++++++++++++++++++++++++++\n");
             _platoon2.Attack(_platoon1);
             ShowInfo();
         }

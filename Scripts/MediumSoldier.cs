@@ -8,18 +8,18 @@ public class MediumSoldier : SoldierBase
 
     public override void Attack(List<SoldierBase> soldiers)
     {
-        if (soldiers != null)
-        {
-            if (soldiers.Count > 0)
-            {
-                int attackCount = Assistant.GenerateRandomNumber(soldiers.Count,1);
+        if (soldiers == null)
+            return;
 
-                for (int i = 0; i < attackCount; i++)
-                {
-                    soldiers[i].TakeDamage(Damage);
-                    PrintAttack(soldiers[i]);
-                }
-            }
+        if (soldiers.Count == 0)
+            return;
+
+        int attackCount = Assistant.GenerateRandomNumber(soldiers.Count, 1);
+
+        for (int i = 0; i < attackCount; i++)
+        {
+            soldiers[i].TakeDamage(Damage);
+            PrintAttack(soldiers[i]);
         }
     }
 

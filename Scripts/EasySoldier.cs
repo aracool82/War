@@ -8,15 +8,15 @@ public class EasySoldier : SoldierBase
 
     public override void Attack(List<SoldierBase> soldiers)
     {
-        if (soldiers != null)
-        {
-            if (soldiers.Count > 0)
-            {
-                int randomIndex = Assistant.GenerateRandomNumber(soldiers.Count);
-                soldiers[randomIndex].TakeDamage(Damage);
-                PrintAttack(soldiers[randomIndex]);
-            }
-        }
+        if (soldiers == null)
+            return;
+
+        if (soldiers.Count == 0)
+            return;
+
+        int randomIndex = Assistant.GenerateRandomNumber(soldiers.Count);
+        soldiers[randomIndex].TakeDamage(Damage);
+        PrintAttack(soldiers[randomIndex]);
     }
 
     public override SoldierBase Clone()

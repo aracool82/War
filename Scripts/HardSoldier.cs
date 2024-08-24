@@ -8,23 +8,22 @@ public class HardSoldier : SoldierBase
 
     public override void Attack(List<SoldierBase> soldiers)
     {
-        if (soldiers != null)
+        if (soldiers == null)
+            return;
+
+        if (soldiers.Count == 0)
+            return;
+
+        int attackCount = Assistant.GenerateRandomNumber(soldiers.Count, 1);
+
+        for (int i = 0; i < attackCount; i++)
         {
-            if (soldiers.Count > 0)
+            int randomIndex = Assistant.GenerateRandomNumber(soldiers.Count);
+
+            if (soldiers[randomIndex].IsAlive)
             {
-                int attackCount = Assistant.GenerateRandomNumber(soldiers.Count,1);
-
-                for (int i = 0; i < attackCount; i++)
-                {
-                    int randomIndex = Assistant.GenerateRandomNumber(soldiers.Count);
-
-                    if (soldiers[randomIndex].IsAlive)
-                    { 
-                        soldiers[randomIndex].TakeDamage(Damage);
-                        PrintAttack(soldiers[randomIndex]);
-                    }
-
-                }
+                soldiers[randomIndex].TakeDamage(Damage);
+                PrintAttack(soldiers[randomIndex]);
             }
         }
     }

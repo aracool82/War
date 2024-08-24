@@ -34,4 +34,12 @@ public abstract class SoldierBase
     }
 
     public abstract SoldierBase Clone();
+
+    protected void PrintAttack(SoldierBase attaker,SoldierBase target)
+    {
+        Console.WriteLine($"Жизнь - {Health}  Дамаг {Damage} Броня {Armor}");
+        Console.WriteLine($"\n{attaker.GetType().Name} attack -> {target.GetType().Name}");
+        Console.WriteLine($"Атакующий нанес - {attaker.Damage} урона");
+        Console.WriteLine($"у цели осталось - {target.Health} жизни\n");
+    }
 }

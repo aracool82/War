@@ -5,11 +5,12 @@ public class Platoon
 {
     private List<SoldierBase> _soldiers;
 
-    public Platoon(List<SoldierBase> solders)
+    public Platoon(List<SoldierBase> solders, string name)
     {
         if (solders == null)
             throw new ArgumentNullException("Ссылка = Null");
 
+        Name = name;
         _soldiers = ReInitSolders(solders);
     }
 
@@ -20,7 +21,7 @@ public class Platoon
     {
         string state = IsAlive == true ? "Жив" : "Мертв";
 
-        Console.WriteLine($"Взвод .\nСтатус - {state} \n\n" +
+        Console.WriteLine($"Взвод {Name}\nСтатус        -  {state} \n" +
             $"Живые солдаты -  {_soldiers.Count}\n");
     }
 

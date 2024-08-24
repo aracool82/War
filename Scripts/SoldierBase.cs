@@ -30,7 +30,7 @@ public abstract class SoldierBase
     public void TakeDamage(int amount)
     {
         if (IsAlive)
-            Health -= amount + Armor;
+            Health -= amount - Armor;
     }
 
     public abstract SoldierBase Clone();

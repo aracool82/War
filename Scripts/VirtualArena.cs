@@ -29,12 +29,18 @@ public class VirtualArena
         while (_platoon1.IsAlive && _platoon2.IsAlive)
         {
             ShowInfo();
-            _platoon1.Attack(_platoon2);
+            _platoon1.Attack(_platoon2.Soldiers);
+            //вставить очистку солдатов
             Console.WriteLine("+++++++++++++++++++++++++++++++++++++++++++\n");
-            _platoon2.Attack(_platoon1);
+            _platoon2.Attack(_platoon1.Soldiers);
             ShowInfo();
         }
 
+        ShowBattleResult(_platoon1, _platoon2);
+    }
+
+    private void ShowBattleResult(Platoon platoon1, Platoon platoon2)
+    {
         if (_platoon1.IsAlive && _platoon2.IsAlive == false)
             Console.WriteLine($"Победил взвод 1 {_platoon1.Name}");
         else if (_platoon2.IsAlive && _platoon1.IsAlive == false)

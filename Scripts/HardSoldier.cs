@@ -21,7 +21,7 @@ public class HardSoldier : SoldierBase
                     if (soldiers[randomIndex].IsAlive)
                     { 
                         soldiers[randomIndex].TakeDamage(Damage);
-                        PrintAttack(this, soldiers[randomIndex]);
+                        PrintAttack(soldiers[randomIndex]);
                     }
 
                 }

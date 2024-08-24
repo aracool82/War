@@ -14,7 +14,7 @@ public class EasySoldier : SoldierBase
             {
                 int randomIndex = Assistant.GenerateRandomNumber(soldiers.Count);
                 soldiers[randomIndex].TakeDamage(Damage);
-                PrintAttack(this, soldiers[randomIndex]);
+                PrintAttack(soldiers[randomIndex]);
             }
         }
     }

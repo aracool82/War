@@ -17,7 +17,7 @@ public class SpecialSoldier : SoldierBase
             {
                 int randomIndex = Assistant.GenerateRandomNumber(soldiers.Count - 1);
                 soldiers[randomIndex].TakeDamage(Damage);
-                PrintAttack(this, soldiers[randomIndex]);
+                PrintAttack(soldiers[randomIndex]);
             }
         }
     }

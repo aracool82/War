@@ -29,13 +29,13 @@ public class VirtualArena
         {
             ShowInfo();
             _platoon1.Attack(_platoon2.Soldiers);
-            _platoon2.RemoveDeadSolder();
 
             Console.WriteLine("+++++++++++++++++++++++++++++++++++++++++++\n");
             Console.ReadKey();
 
             _platoon2.Attack(_platoon1.Soldiers);
-            _platoon1.RemoveDeadSolder();
+            _platoon2.RemoveDeadSolders();
+            _platoon1.RemoveDeadSolders();
             ShowInfo();
         }
 

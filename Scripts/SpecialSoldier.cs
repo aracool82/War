@@ -5,7 +5,7 @@ public class SpecialSoldier : SoldierBase
     public SpecialSoldier(int health, int damage, int armor) : base(health, damage, armor)
     {
         int maxMultiply = 3;
-        int multiply = Assistant.GenerateRandomNumber(maxMultiply, 1);
+        int multiply = Assistant.GenerateRandomNumber(1,maxMultiply);
         Damage *= multiply;
     }
 
@@ -17,7 +17,7 @@ public class SpecialSoldier : SoldierBase
         if (soldiers.Count == 0)
             return;
 
-        int randomIndex = Assistant.GenerateRandomNumber(soldiers.Count - 1);
+        int randomIndex = Assistant.GenerateRandomNumber(soldiers.Count);
         soldiers[randomIndex].TakeDamage(Damage);
         PrintAttack(soldiers[randomIndex]);
     }

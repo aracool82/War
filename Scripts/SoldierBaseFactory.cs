@@ -6,21 +6,21 @@
     {
         int maxHealth = 300;
         int minHealth = 200;
-        return Assistant.GenerateRandomNumber(maxHealth + 1, minHealth);
+        return Assistant.GenerateRandomNumber(minHealth, maxHealth + 1);
     }
 
     protected int GenerateDamge()
     {
         int maxDamge = 40;
         int minDamge = 20;
-        return Assistant.GenerateRandomNumber(maxDamge + 1, minDamge);
+        return Assistant.GenerateRandomNumber(minDamge, maxDamge + 1);
     }
 
     protected int GenerateArmor()
     {
         int maxArmor = 20;
         int minArmor = 10;
-        return Assistant.GenerateRandomNumber(maxArmor + 1, minArmor);
+        return Assistant.GenerateRandomNumber(minArmor, maxArmor + 1);
     }
 }
 

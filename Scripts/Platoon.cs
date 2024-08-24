@@ -47,15 +47,9 @@ public class Platoon
         }
     }
 
-    public void RemoveDeadSolder()
+    public void RemoveDeadSolders()
     {
-        if (_soldiers == null)
-            return;
-
-        if (_soldiers.Count == 0)
-            return;
-
-        for (int i = 0; i < _soldiers.Count; i++)
+        for (int i = _soldiers.Count - 1; i >= 0; i--)
             if (_soldiers[i].IsAlive == false)
                 _soldiers.Remove(_soldiers[i]);
     }

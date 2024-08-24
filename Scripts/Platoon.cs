@@ -37,10 +37,11 @@ public class Platoon
             {
                 if (opponentPlatoon.TryGetSolders(out List<SoldierBase> opponentSolders))
                 {
+                    Console.WriteLine("-------------------------------------");
+
                     for (int i = 0; i < _soldiers.Count; i++)
                     {
                         _soldiers[i].Attack(opponentSolders);
-                        Console.WriteLine("-------------------------------------");
                     }
                 }
             }

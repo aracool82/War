@@ -12,7 +12,7 @@ public class MediumSoldier : SoldierBase
         {
             if (soldiers.Count > 0)
             {
-                int attackCount = Assistant.GenerateRandomNumber(soldiers.Count);
+                int attackCount = Assistant.GenerateRandomNumber(soldiers.Count,1);
 
                 for (int i = 0; i < attackCount; i++)
                 {
